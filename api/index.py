@@ -100,7 +100,7 @@ def get_character_image(id):
             return jsonify({"error": "ID not found"}), 404
         
         # GitHub raw content URL
-        github_url = f"https://raw.githubusercontent.com/hackervaibhav-dot/character-api-vaibhav/main/pngs/{avatar_id}.png"
+        github_url = f"https://raw.githubusercontent.com/hackervaibhav-dot/character-api-vaibhav/main/pngs/{filename}"
         
         # Check if the file exists on GitHub
         response = requests.head(github_url, timeout=5)
